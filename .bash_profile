@@ -19,5 +19,7 @@ export LANG="en_US"
 # You could just use `-g` instead, but I like being explicit
 complete -W "NSGlobalDomain" defaults
 
+export PATH=/usr/local/bin:$PATH
+
 # Load RVM function
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
