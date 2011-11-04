@@ -1,3 +1,6 @@
+[user]
+  name = Mike Melnicki
+  email = melnicki@gmail.com
 [core]
 	excludesfile = ~/.gitignore
 	attributesfile = ~/.gitattributes
@@ -30,6 +33,3 @@
 	pushInsteadOf = "git://gist.github.com/"
 [url "git://gist.github.com/"]
 	insteadOf = "gist:"
-[user]
-  name = Mike Melnicki
-  email = melnicki@gmail.com
