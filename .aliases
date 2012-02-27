@@ -43,7 +43,7 @@ alias cleanup="find . -name '*.DS_Store' -type f -ls -delete"
 
 # Shortcuts
 alias d="cd ~/Dropbox"
-alias c="cd ~/Projects"
+alias c="cd ~/Code"
 alias g="git"
 alias v="vim"
 alias m="mate ."
@@ -76,10 +76,9 @@ alias plistbuddy="/usr/libexec/PlistBuddy"
 # One of @janmoesen’s ProTip™s
 for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do alias "$method"="lwp-request -m '$method'"; done
 
-alias b='bundle'
-
-# This gets used daily
-alias be='b exec'
-
-# Run this whenever there's an update to the Gemfile; regularly used.
-alias bi='b install --path vendor'
+alias b="bundle"
+alias bi="b install --path vendor"
+alias bil="bi --local"
+alias bu="b update"
+alias be="b exec"
+alias binit="bi && b package && echo 'vendor/ruby' >> .gitignore"
