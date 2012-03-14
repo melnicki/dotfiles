@@ -77,7 +77,7 @@ alias plistbuddy="/usr/libexec/PlistBuddy"
 for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do alias "$method"="lwp-request -m '$method'"; done
 
 alias b="bundle"
-alias bi="b install --path vendor"
+alias bi="b install"
 alias bil="bi --local"
 alias bu="b update"
 alias be="b exec"
