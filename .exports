@@ -14,7 +14,7 @@ export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
 
 export PATH=/usr/local/bin:$PATH
 
-export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home
+export JAVA_HOME="$(/usr/libexec/java_home)"
 
 export PATH=$JAVA_HOME:/bin:$PATH
 
@@ -24,6 +24,20 @@ export PATH=$PATH:/usr/local/share/python
 
 export NODE_PATH=/usr/local/lib/node_modules
 
-export EC2_PRIVATE_KEY="$(/bin/ls "$HOME"/.ec2/pk-*.pem | /usr/bin/head -1)"
-export EC2_CERT="$(/bin/ls "$HOME"/.ec2/cert-*.pem | /usr/bin/head -1)"
-export EC2_HOME="/usr/local/Library/LinkedKegs/ec2-api-tools/jars"
+# Download AWS Tools
+# sudo cd /usr/local; wget http://ec2-downloads.s3.amazonaws.com/CloudWatch-2010-08-01.zip; unzip CloudWatch-2010-08-01.zip; rm CloudWatch-2010-08-01.zip
+# sudo cd /usr/local; wget http://s3.amazonaws.com/rds-downloads/RDSCli.zip; unzip RDSCli.zip; rm RDSCli.zip
+# sudo cd /usr/local; wget https://s3.amazonaws.com/elasticache-downloads/AmazonElastiCacheCli-latest.zip; unzip AmazonElastiCacheCli-latest.zip; rm AmazonElastiCacheCli-latest.zip
+# sudo cd /usr/local; wget http://ec2-downloads.s3.amazonaws.com/ElasticLoadBalancing.zip; unzip ElasticLoadBalancing.zip; rm ElasticLoadBalancing.zip
+# sudo cd /usr/local; wget http://s3.amazonaws.com/ec2-downloads/ec2-api-tools.zip; unzip ec2-api-tools.zip; rm ec2-api-tools.zip
+# cp /usr/local/ElasticLoadBalancing-1.0.17.0/credential-file-path.template ~/.aws-credentials
+# chmod 600 ~/.aws-credentials
+# Enter your credentials into ~/.aws-credentials
+
+export EC2_HOME="/usr/local/ec2-api-tools-1.6.5.2"
+export AWS_ELB_HOME=/usr/local/ElasticLoadBalancing-1.0.17.0
+export AWS_ELASTICACHE_HOME=/usr/local/AmazonElastiCacheCli-1.7.000
+export AWS_RDS_HOME=/usr/local/RDSCli-1.10.003
+export AWS_CLOUDWATCH_HOME=/usr/local/CloudWatch-1.0.13.4
+
+export PATH=$PATH:$AWS_ELB_HOME/bin:$EC2_HOME/bin:$AWS_ELASTICACHE_HOME/bin:$AWS_RDS_HOME/bin:$AWS_CLOUDWATCH_HOME/bin
