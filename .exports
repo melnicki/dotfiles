@@ -40,7 +40,7 @@ export NODE_PATH=/usr/local/lib/node_modules
 # mon-cmd --help
 # elb-cmd --help
 # rds --help
-# ec2disaddr
+# ec2-describe-instances
 
 export EC2_HOME="/usr/local/ec2-api-tools-1.6.5.2"
 export AWS_ELB_HOME=/usr/local/ElasticLoadBalancing-1.0.17.0
