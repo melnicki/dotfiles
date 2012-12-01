@@ -34,6 +34,14 @@ export NODE_PATH=/usr/local/lib/node_modules
 # chmod 600 ~/.aws-credentials
 # Enter your credentials into ~/.aws-credentials
 
+# Test the tools
+# elb-cmd --help
+# elasticache --help
+# mon-cmd --help
+# elb-cmd --help
+# rds --help
+# ec2disaddr
+
 export EC2_HOME="/usr/local/ec2-api-tools-1.6.5.2"
 export AWS_ELB_HOME=/usr/local/ElasticLoadBalancing-1.0.17.0
 export AWS_ELASTICACHE_HOME=/usr/local/AmazonElastiCacheCli-1.7.000
