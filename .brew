@@ -12,7 +12,7 @@ echo "Don’t forget to add $(brew --prefix coreutils)/libexec/gnubin to \$PATH.
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
 #brew install findutils
 # Install Bash 4
-brew install bash
+#brew install bash
 
 # Install wget with IRI support
 brew install wget --enable-iri
@@ -36,9 +36,7 @@ brew install wget --enable-iri
 #brew install ack
 #brew install exiv2
 #brew install git
-brew install imagemagick
 #brew install lynx
-brew install node
 #brew install rename
 #brew install rhino
 #brew install tree
@@ -46,7 +44,7 @@ brew install node
 brew install nmap
 brew install netcat
 brew install python
-brew install s3cmd
+#brew install s3cmd
 
 # Remove outdated versions from the cellar
 brew cleanup

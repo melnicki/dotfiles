@@ -18,7 +18,6 @@ alias c="cd ~/Code"
 alias g="git"
 alias h="history"
 alias j="jobs"
-alias v="vim"
 alias m="mate ."
 alias s="subl ."
 alias o="open"
@@ -80,9 +79,6 @@ command -v hd > /dev/null || alias hd="hexdump -C"
 # OS X has no `md5sum`, so use `md5` as a fallback
 command -v md5sum > /dev/null || alias md5sum="md5"
 
-# OS X has no `sha1sum`, so use `shasum` as a fallback
-command -v sha1sum > /dev/null || alias sha1sum="shasum"
-
 
 # Recursively delete `.DS_Store` files
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
@@ -126,9 +122,3 @@ for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
 	alias "$method"="lwp-request -m '$method'"
 done
 
-alias b="bundle"
-alias bi="b install"
-alias bil="bi --local"
-alias bu="b update"
-alias be="b exec"
-alias binit="bi && b package && echo 'vendor/ruby' >> .gitignore"
